@@ -10,20 +10,18 @@ exp
 
 function reverseNestedArray(array) {
     for(let i = 0; i < array.length; i++) {
-        if(array[i].length > 1) {
-            reverseNestedArray(array[i]);
-        }else {
-            return array.reverse();
+        if(typeof array[i] === 'number') {
+            array[i] + 1;
         }
-    };
-    
-
-}
+    }
+    return array;
+};
 a = [9,[5,[10,30]],6];
 
 //console.log(a.indexOf([ 2,3]));
 
 console.log(reverseNestedArray(a));
+console.log(typeof array[0]);
 
 module.exports = reverseNestedArray;
 
